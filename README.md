@@ -1,2 +1,2 @@
 # test-rag
-Repo for my first RAG experiment
+Repo for my first RAG experiment using Azure Foundry tools
