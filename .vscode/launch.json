@@ -2,14 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python Debugger: Current File",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${file}",
-      "console": "integratedTerminal"
-    },
-    {
-      "name": "Python: chat.py (Breakpoints)",
+      "name": "Python: chat.py + BlobService",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/chat.py",
@@ -17,29 +10,8 @@
       "console": "integratedTerminal",
       "redirectOutput": true,
       "envFile": "${workspaceFolder}/.env",
-      "justMyCode": true
-    },
-    {
-      "name": "Python: Current File",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${file}",
-      "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
-      "redirectOutput": true,
-      "envFile": "${workspaceFolder}/.env",
-      "justMyCode": true
-    },
-    {
-      "name": "Python: chat.py",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}/chat.py",
-      "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
-      "redirectOutput": true,
-      "envFile": "${workspaceFolder}/.env",
-      "justMyCode": true
+      "justMyCode": true,
+      "stopOnEntry": false
     }
   ]
 }
