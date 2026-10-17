@@ -2,7 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: chat.py + BlobService",
+      "name": "FastAPI: main:app",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:app", "--host", "127.0.0.1", "--port", "8000"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "justMyCode": true,
+      "stopOnEntry": false
+    },
+    {
+      "name": "Python: chat.py (CLI)",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/chat.py",
