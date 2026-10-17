@@ -21,13 +21,14 @@ class BlobService:
             credential=DefaultAzureCredential(),
         )
 
-    def list_blobs_flat(self):
+    def list_blobs_flat(self) -> list[str]:
         client = self.blob_service_client.get_container_client(self.container_name)
-        documents = []
+        documents: list[str] = []
         for blob in client.list_blobs():
             blob_data = client.get_blob_client(blob.name).download_blob()
-            content = blob_data.readall().decode("utf-8")
-            documents.extend(line.strip() for line in content.splitlines() if line.strip())
+            content = blob_data.readall().decode("utf-8").strip()
+            if content:
+                documents.append(content)
         return documents
 
 

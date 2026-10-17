@@ -14,7 +14,10 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     app.state.rag_service = None
     try:
-        app.state.rag_service = RAGService()
+        rag_service = RAGService()
+        rag_service.load_documents()
+        rag_service.create_embeddings()
+        app.state.rag_service = rag_service
     except Exception:
         logger.exception("RAG service initialization failed")
     yield

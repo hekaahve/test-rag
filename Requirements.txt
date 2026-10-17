@@ -7,4 +7,5 @@ openai
 python-dotenv
 azure-identity
 azure-storage-blob
+langchain-text-splitters
 
